@@ -1,6 +1,7 @@
 package dev.anvilcraft.rg.survival.event.listener;
 
 import dev.anvilcraft.rg.RollingGate;
+import dev.anvilcraft.rg.api.server.TranslationUtil;
 import dev.anvilcraft.rg.survival.SurvivalPlusPlusServerRules;
 import dev.anvilcraft.rg.survival.event.PlayerDeathEvent;
 import net.minecraft.ChatFormatting;
@@ -25,7 +26,7 @@ public class PlayerDeathEventListener {
         MinecraftServer server = player.getServer();
         if (server == null) return;
         PlayerList playerList = server.getPlayerList();
-        Component pos = Component.translatable(
+        Component pos = TranslationUtil.trans(
             "broadcast_death_position.message.position",
             player.getOnPos().getX(),
             player.getOnPos().getY(),
@@ -36,7 +37,7 @@ public class PlayerDeathEventListener {
                 .withHoverEvent(
                     new HoverEvent(
                         HoverEvent.Action.SHOW_TEXT,
-                        Component.translatable("broadcast_death_position.message.position.hover")
+                        TranslationUtil.trans("broadcast_death_position.message.position.hover")
                     )
                 )
                 .withClickEvent(
@@ -50,7 +51,7 @@ public class PlayerDeathEventListener {
                     )
                 )
         );
-        Component component = Component.translatable("broadcast_death_position.message", player.getDisplayName(), pos);
+        Component component = TranslationUtil.trans("broadcast_death_position.message", player.getDisplayName(), pos);
         playerList.broadcastSystemMessage(component, false);
     }
 }

@@ -2,8 +2,6 @@ package dev.anvilcraft.rg.survival.event.listener;
 
 import dev.anvilcraft.rg.RollingGate;
 import dev.anvilcraft.rg.api.event.ServerPlayerChatEvent;
-import dev.anvilcraft.rg.server.ServerPlusPlusServerRules;
-import dev.anvilcraft.rg.server.utils.FastPingFriend;
 import dev.anvilcraft.rg.survival.SurvivalPlusPlusServerRules;
 import dev.anvilcraft.rg.survival.util.SimpleInGameCalculator;
 import dev.anvilcraft.rg.tools.TriConsumer;
