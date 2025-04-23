@@ -5,5 +5,12 @@
   "survival_plus_plus.rolling_gate.rule.view_distance.desc": "Set the default view distance for server",
 
   "survival_plus_plus.rolling_gate.rule.simulation_distance": "Simulation Distance",
-  "survival_plus_plus.rolling_gate.rule.simulation_distance.desc": "Set the default simulation distance for server"
+  "survival_plus_plus.rolling_gate.rule.simulation_distance.desc": "Set the default simulation distance for server",
+
+  "survival_plus_plus.rolling_gate.rule.broadcast_death_position": "Broadcast Death Position",
+  "survival_plus_plus.rolling_gate.rule.broadcast_death_position.desc": "When a player dies, his death position are broadcast",
+
+  "broadcast_death_position.message.position.hover": "Click Copy to clipboard",
+  "broadcast_death_position.message.position": "[%s, %s, %s]",
+  "broadcast_death_position.message": "Player %s dies at %s!"
 }

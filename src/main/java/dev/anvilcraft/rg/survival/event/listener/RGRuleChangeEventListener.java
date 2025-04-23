@@ -1,4 +1,4 @@
-package dev.anvilcraft.rg.survival.event;
+package dev.anvilcraft.rg.survival.event.listener;
 
 import dev.anvilcraft.rg.RollingGate;
 import dev.anvilcraft.rg.api.RGRule;
