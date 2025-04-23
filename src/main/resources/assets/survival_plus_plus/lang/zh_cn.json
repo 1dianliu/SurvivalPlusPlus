@@ -9,5 +9,8 @@
 
   "broadcast_death_position.message.position.hover": "点击复制到剪贴板",
   "broadcast_death_position.message.position": "[%s, %s, %s]",
-  "broadcast_death_position.message": "玩家 %s 死在了 %s！"
+  "broadcast_death_position.message": "玩家 %s 死在了 %s！",
+
+  "survival_plus_plus.rolling_gate.rule.creative_no_clip": "创造玩家无碰撞检测",
+  "survival_plus_plus.rolling_gate.rule.creative_no_clip.desc": "创造玩家可以穿过方块"
 }

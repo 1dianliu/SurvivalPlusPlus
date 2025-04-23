@@ -9,5 +9,8 @@
 
   "broadcast_death_position.message.position.hover": "Click Copy to clipboard",
   "broadcast_death_position.message.position": "[%s, %s, %s]",
-  "broadcast_death_position.message": "Player %s dies at %s!"
+  "broadcast_death_position.message": "Player %s dies at %s!",
+
+  "survival_plus_plus.rolling_gate.rule.creative_no_clip": "Creative no clip",
+  "survival_plus_plus.rolling_gate.rule.creative_no_clip.desc": "Creative no clip"
 }

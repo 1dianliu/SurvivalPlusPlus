@@ -19,4 +19,14 @@ public class SurvivalPlusPlusServerRules {
         }
     )
     public static boolean simpleInGameCalculator = false;
+
+    //创造玩家无碰撞检测
+    @Rule(
+        allowed = {"true", "false"},
+        categories = {
+            SurvivalPlusPlus.MOD_ID,
+            RollingGateCategories.CREATIVE
+        }
+    )
+    public static boolean creativeNoClip = false;
 }
