@@ -4,6 +4,9 @@
   "survival_plus_plus.rolling_gate.rule.broadcast_death_position": "Broadcast Death Position",
   "survival_plus_plus.rolling_gate.rule.broadcast_death_position.desc": "When a player dies, his death position are broadcast",
 
+  "survival_plus_plus.rolling_gate.rule.simple_in_game_calculator": "Simple In Game Calculator",
+  "survival_plus_plus.rolling_gate.rule.simple_in_game_calculator.desc": "Simple In Game Calculator",
+
   "broadcast_death_position.message.position.hover": "Click Copy to clipboard",
   "broadcast_death_position.message.position": "[%s, %s, %s]",
   "broadcast_death_position.message": "Player %s dies at %s!"

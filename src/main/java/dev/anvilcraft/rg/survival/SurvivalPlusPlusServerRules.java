@@ -11,4 +11,12 @@ public class SurvivalPlusPlusServerRules {
         }
     )
     public static boolean broadcastDeathPosition = false;
+
+    @Rule(
+        categories = {
+            SurvivalPlusPlus.MOD_ID,
+            RollingGateCategories.CREATIVE
+        }
+    )
+    public static boolean simpleInGameCalculator = false;
 }
