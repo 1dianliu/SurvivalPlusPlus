@@ -1,12 +1,6 @@
 {
   "rolling_gate.category.survival_plus_plus": "生存++",
 
-  "survival_plus_plus.rolling_gate.rule.view_distance": "视距",
-  "survival_plus_plus.rolling_gate.rule.view_distance.desc": "设置服务器的默认视距",
-
-  "survival_plus_plus.rolling_gate.rule.simulation_distance": "模拟距离",
-  "survival_plus_plus.rolling_gate.rule.simulation_distance.desc": "设置服务器的模拟距离",
-
   "survival_plus_plus.rolling_gate.rule.broadcast_death_position": "广播死亡位置",
   "survival_plus_plus.rolling_gate.rule.broadcast_death_position.desc": "当玩家死亡时，他的死亡位置会被广播",
 
