@@ -9,5 +9,8 @@
 
   "broadcast_death_position.message.position.hover": "点击复制到剪贴板",
   "broadcast_death_position.message.position": "[%s, %s, %s]",
-  "broadcast_death_position.message": "玩家 %s 死在了 %s！"
+  "broadcast_death_position.message": "玩家 %s 死在了 %s！",
+
+  "simple_in_game_calculator.message": "=%s",
+  "simple_in_game_calculator.message.illegal_expression": "非法的表达式: %s"
 }

@@ -9,5 +9,8 @@
 
   "broadcast_death_position.message.position.hover": "Click Copy to clipboard",
   "broadcast_death_position.message.position": "[%s, %s, %s]",
-  "broadcast_death_position.message": "Player %s dies at %s!"
+  "broadcast_death_position.message": "Player %s dies at %s!",
+
+  "simple_in_game_calculator.message": "=%s",
+  "simple_in_game_calculator.message.illegal_expression": "Illegal expression: %s"
 }
