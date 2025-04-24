@@ -11,18 +11,10 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 @Mod(SurvivalPlusPlus.MOD_ID)
-public class SurvivalPlusPlus implements RGAdditional {
+public class SurvivalPlusPlus {
     public static final String MOD_ID = "survival_plus_plus";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public SurvivalPlusPlus(IEventBus modEventBus, @NotNull ModContainer modContainer) {
-        modContainer.registerExtensionPoint(RGAdditional.class, this);
-    }
-
-    @Override
-    public void loadServerRules(@NotNull ServerRGRuleManager manager) {
-        manager.register(SurvivalPlusPlusServerRules.class);
-        TranslationUtil.loadLanguage(SurvivalPlusPlus.class, SurvivalPlusPlus.MOD_ID, "en_us");
-        TranslationUtil.loadLanguage(SurvivalPlusPlus.class, SurvivalPlusPlus.MOD_ID, "zh_cn");
+    public SurvivalPlusPlus(@NotNull @SuppressWarnings("unused") IEventBus modEventBus, @NotNull @SuppressWarnings("unused") ModContainer modContainer) {
     }
 }
