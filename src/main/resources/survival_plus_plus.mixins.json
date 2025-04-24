@@ -5,14 +5,14 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "survival_plus_plus.refmap.json",
   "mixins": [
-    "BlockItemCreativeNoClipMixin",
-    "PlayerCreativeNoClipMixin",
+    "BlockItemMixin",
+    "PlayerMixin",
     "ServerPlayerMixin",
-    "ShulkerBoxBlockEntityCreativeNoClipMixin",
-    "StandingAndWallBlockItemCreativeNoClipMixin"
+    "ShulkerBoxBlockEntityMixin",
+    "StandingAndWallBlockItemMixin"
   ],
   "client": [
-    "LevelRendererCreativeNoClipMixin"
+    "LevelRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
