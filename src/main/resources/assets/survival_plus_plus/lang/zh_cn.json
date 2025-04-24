@@ -11,6 +11,9 @@
   "broadcast_death_position.message.position": "[%s, %s, %s]",
   "broadcast_death_position.message": "玩家 %s 死在了 %s！",
 
+  "simple_in_game_calculator.message": "=%s",
+  "simple_in_game_calculator.message.illegal_expression": "非法的表达式: %s",
+
   "survival_plus_plus.rolling_gate.rule.creative_no_clip": "创造玩家无碰撞检测",
   "survival_plus_plus.rolling_gate.rule.creative_no_clip.desc": "创造玩家可以穿过方块"
 }

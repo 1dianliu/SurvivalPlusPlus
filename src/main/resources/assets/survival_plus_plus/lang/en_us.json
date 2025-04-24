@@ -11,6 +11,9 @@
   "broadcast_death_position.message.position": "[%s, %s, %s]",
   "broadcast_death_position.message": "Player %s dies at %s!",
 
+  "simple_in_game_calculator.message": "=%s",
+  "simple_in_game_calculator.message.illegal_expression": "Illegal expression: %s",
+
   "survival_plus_plus.rolling_gate.rule.creative_no_clip": "Creative no clip",
   "survival_plus_plus.rolling_gate.rule.creative_no_clip.desc": "Creative no clip"
 }
