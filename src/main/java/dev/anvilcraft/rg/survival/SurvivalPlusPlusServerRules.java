@@ -2,7 +2,9 @@ package dev.anvilcraft.rg.survival;
 
 import dev.anvilcraft.rg.RollingGateCategories;
 import dev.anvilcraft.rg.api.Rule;
+import dev.anvilcraft.rg.api.server.RGServerRules;
 
+@RGServerRules(value = "survival_plus_plus", languages = {"zh_cn", "en_us"})
 public class SurvivalPlusPlusServerRules {
     @Rule(
         categories = {
