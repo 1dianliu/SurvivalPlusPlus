@@ -26,7 +26,8 @@ public class SurvivalPlusPlusServerRules {
     @Rule(
         categories = {
             SurvivalPlusPlus.MOD_ID,
-            RollingGateCategories.CREATIVE
+            RollingGateCategories.CREATIVE,
+            RollingGateCategories.CLIENT
         }
     )
     public static boolean creativeNoClip = false;
