@@ -6,13 +6,13 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 
-public class PlayerCanPlaceEvent extends PlayerEvent {
+public class PlayerCanPlaceBlockItemEvent extends PlayerEvent {
     private final BlockItem item;
     private final BlockPlaceContext context;
     private final BlockState state;
     private boolean canPlace;
 
-    public PlayerCanPlaceEvent(Player player, BlockItem item, BlockPlaceContext context, BlockState state, boolean canPlace) {
+    public PlayerCanPlaceBlockItemEvent(Player player, BlockItem item, BlockPlaceContext context, BlockState state, boolean canPlace) {
         super(player);
         this.item = item;
         this.context = context;

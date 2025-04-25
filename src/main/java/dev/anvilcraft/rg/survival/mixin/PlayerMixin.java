@@ -1,16 +1,16 @@
 package dev.anvilcraft.rg.survival.mixin;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import dev.anvilcraft.rg.survival.SurvivalPlusPlusServerRules;
-import dev.anvilcraft.rg.survival.event.ModifyIsSpectatorEvent;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.neoforge.common.NeoForge;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(Player.class)
 abstract class PlayerMixin {
-    @ModifyExpressionValue(
+    @WrapOperation(
         method = {
             "tick()V",
             "aiStep()V",
@@ -22,12 +22,8 @@ abstract class PlayerMixin {
             ordinal = 0
         )
     )
-    private boolean modifyIsSpectator(boolean original) {
+    private boolean modifyIsSpectator(Player instance, @NotNull Operation<Boolean> original) {
         Player player = (Player) (Object) this;
-        if (SurvivalPlusPlusServerRules.creativeNoClip && player.isCreative() && player.getAbilities().flying) {
-            NeoForge.EVENT_BUS.post(new ModifyIsSpectatorEvent(player));
-            return true;
-        }
-        return original;
+        return original.call(instance) || (SurvivalPlusPlusServerRules.creativeNoClip && player.isCreative() && player.getAbilities().flying);
     }
 }

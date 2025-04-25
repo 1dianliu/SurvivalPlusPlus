@@ -4,7 +4,8 @@ import dev.anvilcraft.rg.RollingGate;
 import dev.anvilcraft.rg.api.event.ServerPlayerChatEvent;
 import dev.anvilcraft.rg.api.server.TranslationUtil;
 import dev.anvilcraft.rg.survival.SurvivalPlusPlusServerRules;
-import dev.anvilcraft.rg.survival.event.PlayerCanPlaceEvent;
+import dev.anvilcraft.rg.survival.event.PlayerCanPlaceBlockItemEvent;
+import dev.anvilcraft.rg.survival.event.PlayerCanPlaceStandingAndWallBlockItemEvent;
 import dev.anvilcraft.rg.survival.event.PlayerDeathEvent;
 import dev.anvilcraft.rg.survival.mixin.BlockItemAccessor;
 import dev.anvilcraft.rg.survival.util.SimpleInGameCalculator;
@@ -22,6 +23,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -82,7 +84,7 @@ public class PlayerEventListener {
     }
 
     @SubscribeEvent
-    public static void onPlayerCanPlace(@NotNull PlayerCanPlaceEvent event) {
+    public static void onPlayerCanPlace(@NotNull PlayerCanPlaceBlockItemEvent event) {
         if (event.canPlace()) return;
         BlockItem item = event.getItem();
         BlockPlaceContext context = event.getContext();
@@ -100,6 +102,22 @@ public class PlayerEventListener {
             context
         );
         event.setCanPlace(flag);
+    }
+
+    @SubscribeEvent
+    public static void onPlayerCanPlace(@NotNull PlayerCanPlaceStandingAndWallBlockItemEvent event) {
+        if (event.canPlace()) return;
+        BlockPlaceContext context = event.getContext();
+        BlockState state = event.getState();
+        Player player = context.getPlayer();
+        LevelReader reader = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        if (SurvivalPlusPlusServerRules.creativeNoClip && player != null && player.isCreative() && player.getAbilities().flying) {
+            VoxelShape voxelShape = state.getCollisionShape(reader, pos, CollisionContext.empty());
+            if (voxelShape.isEmpty() || reader.isUnobstructed(player, voxelShape.move(pos.getX(), pos.getY(), pos.getZ()))) {
+                event.setCanPlace(true);
+            }
+        }
     }
 
     private static boolean canSpectatingPlace(
